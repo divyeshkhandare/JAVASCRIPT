@@ -1,5 +1,11 @@
 // convert lower case to upper case
 
-let str = "white";
+const str =(e) =>{
+    e.preventDefault();
+    let str = document.getElementById("upper").value;
+    str = str.toUpperCase();
+    document.getElementById("output").innerHTML = `${str}`;
+}
 
-console.log(str.toUpperCase());
+document.getElementById("form").addEventListener("submit", str);
+
