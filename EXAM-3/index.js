@@ -11,7 +11,7 @@ const handleDeleteAll = (index) => {
 };
 
 const content = () => {
-  document.getElementById("tbody").innerHTML = "";
+  
   document.getElementById("tbody").innerHTML = "";
   let total = users.length;
   document.getElementById("totalemp").innerHTML = `TOTAL EMPLOYEES =  ${total}`;
@@ -77,7 +77,7 @@ const handleData = (e) => {
   users.push(user);
   console.log(users);
   content();
-  data();
+  
 };
 
 document.getElementById("UserData").addEventListener("submit", handleData);
