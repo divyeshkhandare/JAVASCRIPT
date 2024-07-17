@@ -54,7 +54,7 @@ const content = () => {
     // Delete all the users
     document
       .getElementById("delete")
-      .addEventListener("click", () => handleDeleteAll);
+      .addEventListener("click", () => handleDeleteAll(i));
   }
 };
 
