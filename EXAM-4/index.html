@@ -17,16 +17,16 @@
       <input type="text" id="UserName" placeholder="Student Name" />
       <input type="tex" id="grid" placeholder="GR ID" />
       <select name="" id="course">
-        <option value="Full-Stack">Full-Stack</option>
-        <option value="Front End">Front End</option>
-        <option value="Back End">Back End</option>
-        <option value="UI/UX">UI/UX</option>
+        <option value="Full-Stack Developer" id="fullstack">Full-Stack Dveloper</option>
+        <option value="Front End Developer" id="frontend">Front End Dveloper</option>
+        <option value="Back End Developer" id="backend">Back End Dveloper</option>
+        <option value="UI/UX" id="uiux">UI/UX</option>
       </select>
       <select name="" id="fees">
-        <option value="95,000 /-">95,000 /-</option>
-        <option value="85,000 /-">85,000 /-</option>
-        <option value="75,000 /-">75,000 /-</option>
-        <option value="1,20,000 /-">1,20,000 /-</option>
+        <option value="95,000" id="fees1">95,000</option>
+        <option value="85,000" id="fees2">85,000</option>
+        <option value="75,000" id="fees3">75,000</option>
+        <option value="1,20,000" id="fees4">1,20,000</option>
       </select>
       <input type="number" id="number" placeholder="Number" />
       <input type="submit" value="Submit" />
@@ -52,13 +52,12 @@
     >
       <thead>
         <tr>
-          <th scope="col">SR NO</th>
           <th scope="col">Course</th>
           <th scope="col">Total Students</th>
           <th scope="col">Fees</th>
         </tr>
       </thead>
-      <tbody id="tbody"></tbody>
+      <tbody id="tbody2"></tbody>
     </table>
 
     <script src="./index.js"></script>
