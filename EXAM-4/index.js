@@ -141,27 +141,27 @@ const handleData = (e) => {
     fees4: document.getElementById("fees4").value,
     number: document.getElementById("number").value,
   };
-  // if (user.username.length < 2) {
-  //   alert("Username should be at least 2 characters long");
-  //   return;
-  // }
-  // if (user.grid.length != 4) {
-  //   alert("GRID should be 4 characters long");
-  //   return;
-  // }
-  // if (
-  //   user.number.length != 10 ) {
-  //   alert(
-  //     "Phone number should be at least 10 Numbers"
-  //   );
-  //   return;
-  // }
-  // if (!["6","7","8","9"].includes(user.number[0])){
-  //   alert(
-  //     "Phone number should start with 6, 7, 8, or 9"
-  //   );
-  //   return;
-  // }
+  if (user.username.length < 2) {
+    alert("Username should be at least 2 characters long");
+    return;
+  }
+  if (user.grid.length != 4) {
+    alert("GRID should be 4 characters long");
+    return;
+  }
+  if (
+    user.number.length != 10 ) {
+    alert(
+      "Phone number should be at least 10 Numbers"
+    );
+    return;
+  }
+  if (!["6","7","8","9"].includes(user.number[0])){
+    alert(
+      "Phone number should start with 6, 7, 8, or 9"
+    );
+    return;
+  }
 
   users.push(user);
   console.log(users);
