@@ -81,14 +81,18 @@ class Book {
   }
 
   checkAvailability() {
+    if (this.#copiesAvailable >=0){
     return this.#copiesAvailable;
+    } else {
+      return `No copies available`;
+    }
   }
 
   displayBookInfo() {
     if (
       this.#copiesAvailable >= 0 &&
-      this.#price >= 0 &&
-      this.#rentalPrice >= 0
+      this.#price > 0 &&
+      this.#rentalPrice > 0
     ) {
       return `Title: ${this.title}\nAuthor: ${this.author}\nPrice: ₹${
         this.#price
@@ -112,3 +116,8 @@ console.log(Book1.returnBook(5));
 console.log(Book1.checkAvailability());
 
 console.log(Book1.displayBookInfo());
+
+
+let Book2 = new Book("Rich Dad, Poor Dad", "Robert T. Kiyosaki", -100, -50, -10);
+
+console.log(Book2.checkAvailability());
