@@ -1,4 +1,5 @@
 class Book {
+  #author;
   #price;
   #rentalPrice;
   #copiesAvailable;
@@ -6,11 +7,14 @@ class Book {
 
   constructor(title, author, price, rentalPrice, copiesAvailable) {
     this.title = title;
-    this.author = author;
+    this.#author = author;
     this.#price = price;
     this.#rentalPrice = rentalPrice;
     this.#copiesAvailable = copiesAvailable;
     this.#rentedCopies = 0;
+  }
+  getAuthor() {
+    return this.#author;
   }
   getPrice() {
     return this.#price;
@@ -26,6 +30,9 @@ class Book {
 
   getRentedCopies() {
     return this.#rentedCopies;
+  }
+  setAuthor(author) {
+    this.#author = author;
   }
 
   setPrice(price) {
@@ -81,8 +88,8 @@ class Book {
   }
 
   checkAvailability() {
-    if (this.#copiesAvailable >=0){
-    return this.#copiesAvailable;
+    if (this.#copiesAvailable >= 0) {
+      return this.#copiesAvailable;
     } else {
       return `No copies available`;
     }
@@ -94,7 +101,7 @@ class Book {
       this.#price > 0 &&
       this.#rentalPrice > 0
     ) {
-      return `Title: ${this.title}\nAuthor: ${this.author}\nPrice: ₹${
+      return `Title: ${this.title}\nAuthor: ${this.#author}\nPrice: ₹${
         this.#price
       }\nRental Price: ₹${this.#rentalPrice}\nCopies Available: ${
         this.#copiesAvailable
@@ -117,7 +124,14 @@ console.log(Book1.checkAvailability());
 
 console.log(Book1.displayBookInfo());
 
+let Book2 = new Book(
+  "Rich Dad, Poor Dad",
+  "Robert T. Kiyosaki",
+  -100,
+  -50,
+  -10
+);
 
-let Book2 = new Book("Rich Dad, Poor Dad", "Robert T. Kiyosaki", -100, -50, -10);
+console.log(Book2.displayBookInfo());
 
 console.log(Book2.checkAvailability());
