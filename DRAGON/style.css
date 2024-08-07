@@ -27,25 +27,34 @@ form {
   border-radius: 20px;
 }
 
-#div-2 {
-  background: #1a4870;
-  width: 20%;
-  height: 200px;
-  color: #fff;
-  border-radius: 20px;
-}
-table,
-thead,
-tr {
-  width: 100%;
-  height: 200px;
+#div-2{
   display: flex;
-  flex-direction: column;
-  margin-top: 5px;
-  gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
+table{
+  width: 17%;
+  margin-right: 20px;
+  margin-top: 30px;
+  height:150px;
+  /* background-color: #5B99C2;   */
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+tbody tr th{
+  padding-left: 20px;
+}
+
+tbody > button{
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border: 2px solid #000;
+  color: #fff;
+  background-color: #d13335;
+}
 @media (max-width: 700px) {
   form {
     display: flex;
@@ -56,5 +65,17 @@ tr {
   }
   .main-sec > img {
     height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  table{
+    width: 30%;
+  }
+}
+
+@media(max-width: 500px) {
+  table{
+    width: 100%;
   }
 }
