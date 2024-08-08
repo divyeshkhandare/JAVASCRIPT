@@ -86,4 +86,7 @@ tbody > button{
     position: relative;
     right: -140px;
   }
+  .main-sec > img{
+    height: 40vh;
+  }
 }
