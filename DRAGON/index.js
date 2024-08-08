@@ -61,7 +61,7 @@ const content = () => {
     tbody.append(tr, tr2, tr3);
     tbody2.append(btn);
     table.append(tbody, tbody2);
-    document.getElementById("div-2").append(table);
+    document.getElementById("div-2").append(table, img);
   }
 };
 
