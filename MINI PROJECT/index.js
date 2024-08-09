@@ -1,7 +1,7 @@
 function toss(choice) {
-  const isHeads = Math.random() < 0.5;
+  const isHeads = Math.random() * 2;
   let result;
-  if (isHeads) {
+  if (isHeads <= 1) {
     result = "heads";
   } else {
     result = "tails";
