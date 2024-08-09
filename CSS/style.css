@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 div{
   display: flex;
@@ -10,6 +11,7 @@ div{
 
 button {
   padding: 5px 15px;
+  font-family: "Jost", sans-serif;
   outline: none;
   border: none;
   border-radius: 20px;
